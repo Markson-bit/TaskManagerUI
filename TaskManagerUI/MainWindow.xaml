@@ -5,8 +5,114 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaskManagerUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="#778899"
+        BorderBrush="#242323"
+        BorderThickness="2"
+        MouseDown="Window_mousedown"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Background="#3f6184"
+              Grid.ColumnSpan="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="381*"/>
+                <ColumnDefinition Width="19*"/>
+                <ColumnDefinition Width="19*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="ExitButon" 
+                    Grid.Column="3" 
+                    Background="#3f6184" 
+                    Click="ExitClick"
+                    BorderBrush="#3f6184">
+                X
+            </Button>
+
+            <Button x:Name="MinimizeButton" 
+                    Grid.Column="1" 
+                    Background="#3f6184" 
+                    Click="MinimizeClick"
+                    BorderBrush="#3f6184">
+                -
+            </Button>
+        </Grid>
+
+        <StackPanel Grid.Row="1">
+            <TextBlock Width="85"
+                       Margin="10"
+                       FontFamily="Verdana"
+                       FontSize="18">
+                Task List:
+            </TextBlock>
+            <ListBox x:Name="TaskList" Margin="20,10,20,10" 
+                     Height="349"    
+                     Background="#f0d5c5"
+                     BorderBrush="#363534"
+                     BorderThickness="2" Width="358">
+            </ListBox>
+        </StackPanel>
+
+        <TextBlock Margin="5,3,0,0">
+            Task Manager v1.0
+        </TextBlock>
+
+        <TextBlock Grid.Row="1"
+                   Grid.Column="1"
+                   FontFamily="Verdana"
+                   FontSize="18" 
+                   Margin="116,274,145,116">
+            Choose Action:
+        </TextBlock>
+
+        <Button x:Name="AddTask" 
+                Grid.Row="1"
+                Margin="10,316,282,70"
+                Grid.Column="1" 
+                Click="AddClick"
+                Background="#f0d5c5"
+                BorderBrush="#363534"
+                BorderThickness="2">
+            Add Task
+        </Button>
+        <Button x:Name="DelTask" 
+                Grid.Row="1"
+                Margin="253,316,35,70"
+                Grid.Column="1" 
+                Click="DelClick"
+                Background="#f0d5c5"
+                BorderBrush="#363534"
+                BorderThickness="2">
+            Delete Task
+        </Button>
+
+        <TextBox x:Name="TaskBox" 
+                 Grid.Row="1"
+                 Grid.Column="1" 
+                 Margin="10,376,35,20"
+                 Background="#f0d5c5"
+                 BorderBrush="#363534"
+                 BorderThickness="2">
+        </TextBox>
+        <TextBlock Grid.Row="1"
+                   Grid.Column="1"
+                   FontFamily="Verdana"
+                   FontSize="12" 
+                   Margin="120,356,145,45">
+            Input Your task here:
+        </TextBlock>
+
     </Grid>
 </Window>
