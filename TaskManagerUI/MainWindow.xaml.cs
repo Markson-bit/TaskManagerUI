@@ -22,7 +22,7 @@ namespace TaskManagerUI
     public partial class MainWindow : Window
     {
         // String that contains path to: App location + task.txt file.
-        string filePath = System.AppDomain.CurrentDomain.BaseDirectory + @"\tasks.txt"; 
+        string filePath = AppDomain.CurrentDomain.BaseDirectory + @"\tasks.txt"; 
         public MainWindow()
         {
             InitializeComponent();
