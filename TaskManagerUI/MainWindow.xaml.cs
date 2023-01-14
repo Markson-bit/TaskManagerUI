@@ -115,5 +115,10 @@ namespace TaskManagerUI
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
         }
+
+        private void DragOverExit(object sender, DragEventArgs e)
+        {
+
+        }
     }
 }
