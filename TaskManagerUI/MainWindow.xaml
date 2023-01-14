@@ -8,11 +8,31 @@
         Title="MainWindow" Height="450" Width="800"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Background="#778899"
-        BorderBrush="#242323"
-        BorderThickness="2"
+        Background="Transparent"
+        AllowsTransparency="True"
         MouseDown="Window_mousedown"
         WindowStartupLocation="CenterScreen">
+
+    <Border CornerRadius="50"
+            BorderThickness="5">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#f2e7a1" Offset="0"/>
+                <GradientStop Color="#dcd9a3" Offset="0.25"/>
+                <GradientStop Color="#b7bca4" Offset="0.75"/>
+                <GradientStop Color="#a9aca3" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#f2e7a1" Offset="0"/>
+                <GradientStop Color="#dcd9a3" Offset="0.25"/>
+                <GradientStop Color="#b7bca4" Offset="0.75"/>
+                <GradientStop Color="#a9aca3" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+            
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -24,7 +44,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Grid Background="#3f6184"
+        <!--<Grid Background="#3f6184"
               Grid.ColumnSpan="2">
 
             <Grid.ColumnDefinitions>
@@ -48,7 +68,7 @@
                     BorderBrush="#3f6184">
                 -
             </Button>
-        </Grid>
+        </Grid>-->
 
         <StackPanel Grid.Row="1">
             <TextBlock Width="85"
@@ -61,13 +81,13 @@
                      Height="349"    
                      Background="#f0d5c5"
                      BorderBrush="#363534"
-                     BorderThickness="2" Width="358">
+                     BorderThickness="2" Width="353">
             </ListBox>
         </StackPanel>
 
-        <TextBlock Margin="5,3,0,0">
+        <!--<TextBlock Margin="5,3,0,0">
             Task Manager v1.0
-        </TextBlock>
+        </TextBlock>-->
 
         <TextBlock Grid.Row="1"
                    Grid.Column="1"
@@ -115,4 +135,5 @@
         </TextBlock>
 
     </Grid>
+    </Border>
 </Window>
