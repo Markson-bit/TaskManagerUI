@@ -9,9 +9,6 @@
   1. Showing tasks saved in file.
   2. Adding new tasks.
   3. Deleting specific tasks.
-
-### Ideas for future:
-  1. Better look cause actual is kinda awful.
   
 ### Example screenshot:
-![image](https://user-images.githubusercontent.com/88060437/209232811-64c8f732-8737-46d2-8e5a-b3100fa1960c.png)
+![imageedit_4_6560710374](https://user-images.githubusercontent.com/88060437/212496666-8b312215-176f-4b25-9be8-c68caada3b33.png)
